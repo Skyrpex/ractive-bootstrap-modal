@@ -16,6 +16,7 @@ var bundler = browserify({
 
 bundler.exclude('ractive');
 bundler.exclude('ractive-transitions-fade');
+bundler.exclude('ractive-transitions-fly');
 
 bundler.bundle(function (error, stream) {
   if (error) throw error;

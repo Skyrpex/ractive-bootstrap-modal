@@ -1,8 +1,8 @@
 {{#visible}}
-	<div intro-outro="fade: { duration: {{transitionDuration}} }" class="modal-backdrop" {{#zIndex}}style="z-index: {{zIndex}};"{{/}}></div>
+	<div intro-outro="fade: { duration: {{transitionDuration}} }" class="modal-backdrop"></div>
 
 	<div class="modal-open">
-		<div intro-outro="fade: { duration: {{transitionDuration}} }" class="modal" tabindex="-1" role="dialog" aria-hidden="true" style="display: block; {{#zIndex}}z-index: {{zIndex}};{{/}}" on-click="backdrop">
+		<div intro-outro="fly: { duration: {{transitionDuration}}, x: 0, y: '-25%' }" class="modal" tabindex="-1" role="dialog" aria-hidden="true" style="display: block; {{#zIndex}}z-index: {{zIndex}};{{/}}" on-click="backdrop">
 			{{yield}}
 		</div>
 	</div>
