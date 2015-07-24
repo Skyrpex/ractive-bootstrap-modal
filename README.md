@@ -6,18 +6,6 @@ Modal component for Ractive that uses Twitter Bootstrap's CSS.
 
 * Use ```bootstrap```'s stylesheets.
 
-## Modal properties
-
-These are the default modal properties:
-
-```javascript
-{
-  visible: false,
-  transitionDuration: 100,
-  zIndex: 0
-}
-```
-
 ## Usage
 
 ```shell
@@ -34,6 +22,7 @@ export default Ractive.extend({
   },
   data() {
     return {
+      // Will use this to show/hide the modal
       showModal: false
     }
   }
