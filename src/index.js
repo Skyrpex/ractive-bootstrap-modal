@@ -9,8 +9,7 @@ export default Ractive.extend({
   },
   data() {
     return {
-      visible: false,
-      transitionDuration: 150
+      visible: false
     }
   },
   oninit() {
