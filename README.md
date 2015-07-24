@@ -5,6 +5,13 @@ Modal component for Ractive that uses Twitter Bootstrap's CSS.
 ## Requirements
 
 * Use ```bootstrap```'s stylesheets.
+* Add this to your stylesheets:
+
+```css
+.modal-backdrop {
+	opacity: 0.5;
+}
+```
 
 ## Usage
 
