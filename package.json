@@ -8,7 +8,7 @@
     "url": "https://github.com/skyrpex/ractive-components-bootstrap-modal.git"
   },
   "scripts": {
-    "postinstall": "mkdir -p lib && node bin/build"
+    "install": "mkdir -p lib && node bin/build"
   },
   "author": "Cristian Pallarés <skyrpex@gmail.com>",
   "license": "ISC",
