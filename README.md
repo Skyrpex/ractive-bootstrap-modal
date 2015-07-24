@@ -1,11 +1,9 @@
-# Ractive Bootstrap Modal
+# Ractive Component Bootstrap Modal
 
 Modal component for Ractive that uses Twitter Bootstrap's CSS.
 
 ## Requirements
 
-* Use ```babel``` transpiler.
-* Configure ```ractivate``` (browserify) or ```ractive-loader``` (webpack) to load ```.hbs``` files.
 * Use ```bootstrap```'s stylesheets.
 
 ## Modal properties
