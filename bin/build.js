@@ -1,6 +1,5 @@
 var browserify = require('browserify');
 var babelify = require('babelify');
-var ractivate = require('ractivate');
 var brfs = require('brfs');
 var fs = require('fs');
 
