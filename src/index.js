@@ -9,7 +9,7 @@ export default Ractive.extend({
   },
   data() {
     return {
-      visible: false
+      show: false
     }
   },
   oninit() {
@@ -18,7 +18,7 @@ export default Ractive.extend({
       const { clientX, clientY } = e.original;
       const backdrop = this.find('.modal');
       if (document.elementFromPoint(clientX, clientY) === backdrop) {
-        this.set('visible', false);
+        this.set('show', false);
         return false;
       }
     });

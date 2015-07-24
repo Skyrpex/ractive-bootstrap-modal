@@ -39,7 +39,7 @@ export default Ractive.extend({
   <button type="button" class="btn btn-primary" on-click="toggle('showModal')">Show modal</button>
 
   <!-- Modal component -->
-  <Modal visible="{{showModal}}">
+  <Modal show="{{showModal}}">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
