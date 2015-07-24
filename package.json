@@ -4,7 +4,7 @@
   "description": "Modal component for Ractive that uses Twitter Bootstrap's CSS",
   "main": "lib/index.js",
   "scripts": {
-    "prepublish": "node bin/build"
+    "postinstall": "node bin/build"
   },
   "author": "Cristian Pallarés <skyrpex@gmail.com>",
   "license": "ISC",
