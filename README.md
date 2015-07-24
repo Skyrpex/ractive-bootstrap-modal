@@ -20,13 +20,17 @@ These are the default modal properties:
 
 ## Usage
 
+```shell
+npm install skyrpex/ractive-components-bootstrap-modal --save-dev
+```
+
 ### app.js
 
 ```js
 export default Ractive.extend({
   template: require('./app.hbs'),
   components: {
-    Modal: require('ractive-bootstrap-modal')
+    Modal: require('ractive-components-bootstrap-modal')
   },
   data() {
     return {
