@@ -1,25 +1,18 @@
-var browserify = require('browserify');
-var babelify = require('babelify');
-var brfs = require('brfs');
 var fs = require('fs');
+var path = require('path');
+var brfs = require('brfs');
+var through2 = require('through2');
+var babel = require('babel');
 
-var bundler = browserify({
-  entries: 'index',
-  basedir: 'src',
-  transform: [
-    [babelify, { loose: 'all' }],
-    [brfs]
-  ],
-  standalone: 'Ractive.components.Modal'
-});
+var file = 'src/index.js';
 
-bundler.exclude('ractive');
-bundler.exclude('ractive-transitions-fade');
-bundler.exclude('ractive-transitions-fly');
+var rs = fs.createReadStream(file)
+  .pipe(through2(function (chunk, enc, callback) {
+    var result = babel.transform(chunk, { loose: 'all' });
 
-bundler.bundle(function (error, stream) {
-  if (error) throw error;
-  fs.writeFile('lib/index.js', stream.toString(), function (error) {
-    if (error) throw error;
-  });
-});
+    this.push(result.code);
+
+    callback();
+   }))
+  .pipe(brfs(file))
+  .pipe(fs.createWriteStream('lib/index.js'));
