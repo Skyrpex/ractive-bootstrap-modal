@@ -8,7 +8,8 @@
     "url": "https://github.com/skyrpex/ractive-components-bootstrap-modal.git"
   },
   "scripts": {
-    "prepublish": "mkdir -p lib && babel-node bin/build"
+    "prepublish": "mkdir -p lib && babel-node bin/build && npm run build-demo",
+    "build-demo": "webpack babel!./demo/src/index.js demo/index.js"
   },
   "author": "Cristian Pallarés <skyrpex@gmail.com>",
   "license": "ISC",
@@ -18,8 +19,13 @@
   },
   "devDependencies": {
     "babel": "^5.8.9",
+    "babel-core": "^5.8.23",
+    "babel-loader": "^5.3.2",
     "brfs": "^1.4.0",
-    "through2": "^2.0.0"
+    "ractive": "^0.7.3",
+    "ractive-loader": "^0.5.6",
+    "through2": "^2.0.0",
+    "webpack": "^1.12.1"
   },
   "peerDependencies": {
     "ractive": "^0.7.3"
