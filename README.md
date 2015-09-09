@@ -67,3 +67,7 @@ export default Ractive.extend({
 </div>
 
 ```
+
+## Demo
+
+Try the demo [here](https://cdn.rawgit.com/skyrpex/ractive-components-bootstrap-modal/master/demo/index.html).
