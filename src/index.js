@@ -2,16 +2,20 @@ import Ractive from 'ractive';
 
 export default Ractive.extend({
   template: require('fs').readFileSync(__dirname + '/index.hbs', 'utf8'),
+
   isolated: true,
+
   transitions: {
     fade: require('ractive-transitions-fade'),
-    fly: require('ractive-transitions-fly')
+    fly: require('ractive-transitions-fly'),
   },
+
   data() {
     return {
-      show: false
-    }
+      show: false,
+    };
   },
+
   oninit() {
     // Listen to backdrop click.
     this.on('backdrop', e => {
@@ -22,5 +26,5 @@ export default Ractive.extend({
         return false;
       }
     });
-  }
+  },
 });
